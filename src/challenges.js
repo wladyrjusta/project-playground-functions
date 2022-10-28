@@ -7,21 +7,23 @@ function compareTrue(animal1, animal2) {
     return true;
   } return false;
 }
-console.log(compareTrue(macaco, elefante));
-console.log(compareTrue(macaco, macaco));
-console.log(compareTrue(girafa, elefante));
+compareTrue(macaco, elefante);
+compareTrue(macaco, macaco);
+compareTrue(girafa, elefante);
 // Desafio 2
 function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
-console.log(calcArea(10, 50));
-console.log(calcArea(5, 2));
-console.log(calcArea(51, 1));
+calcArea(10, 50);
+calcArea(5, 2);
+calcArea(51, 1);
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(' ');
 }
-
+splitSentence('go Trybe');
+splitSentence('Vamo que Vamo');
+splitSentence('foguete');
 // Desafio 4
 function concatName() {
   // seu código aqui
