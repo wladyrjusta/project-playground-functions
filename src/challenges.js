@@ -1,13 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  // Iniciando projeto. Primeiro Pr
+const girafa = true;
+const elefante = true;
+function compareTrue(animal1, animal2) {
+  if (animal1 && animal2 === true) {
+    return true;
+  } return false;
 }
-
+console.log(compareTrue(girafa, elefante));
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  return (base * altura) / 2;
 }
-
+console.log(calcArea(10, 50));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
