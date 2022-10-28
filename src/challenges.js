@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
   const cat1win = cat1 - mouse;
   const cat2win = cat2 - mouse;
   if (cat1win > cat2win) {
-    console.log('cat1');
+    console.log('cat2');
   } else if (cat2win > cat1win) {
     console.log('cat2');
   } return 'os gatos trombam e o rato foge';
@@ -71,10 +71,24 @@ catAndMouse(5, 2, 3);
 catAndMouse(13, 7, 1);
 catAndMouse(5, 3, 3);
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+const array1 = [2, 15, 7, 9, 45];
+const array2 = [7, 9];
+const array3 = [9, 25];
+function fizzBuzz(paramArray) {
+  for (let arrayIndex in paramArray) {
+    if (paramArray[arrayIndex] % 5 === 0) {
+      paramArray.splice([arrayIndex], 1, 'fizzBuzz');
+    } else if (paramArray[arrayIndex] % 3 === 0) {
+      paramArray.splice([arrayIndex], 1, 'fizz');
+    } else {
+      paramArray.splice([arrayIndex], 1, 'bug!');
+    }
+  }
 }
-
+fizzBuzz(array1);
+fizzBuzz(array2);
+fizzBuzz(array3);
+console.log(array2);
 // Desafio 9
 function encode() {
   // seu código aqui
