@@ -42,10 +42,21 @@ footballPoints(14, 8);
 footballPoints(1, 2);
 footballPoints(0, 0);
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+const arrayNum1 = [9, 1, 2, 3, 9, 5, 7];
+const arrayNum2 = [0, 4, 4, 4, 9, 2, 1];
+const arrayNum3 = [0, 0, 0];
+function highestCount(arrayNums) {
+  let counts = {};
+  arrayNums.forEach((count) => {
+    counts[count] = (counts[count] || 0) + 1;
+  });
+  const maxVal = Math.max(...Object.values(counts));
+  const num = Object.keys(counts).find((key) => counts[key] === maxVal);
+  return `Maior númerodo do array= ${num} se repete= ${maxVal}`;
 }
-
+highestCount(arrayNum1);
+highestCount(arrayNum2);
+highestCount(arrayNum3);
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
