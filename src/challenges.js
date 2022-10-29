@@ -49,11 +49,11 @@ function highestCount(arrayNums) {
   });
   const maxVal = Math.max(...Object.values(counts));
   const num = Object.keys(counts).find((key) => counts[key] === maxVal);
-  return `Maior númerodo do array= ${num} se repete= ${maxVal}`;
+  return `${maxVal}`;
 }
-highestCount(arrayNum1);
-highestCount(arrayNum2);
-highestCount(arrayNum3);
+console.log(highestCount(arrayNum1));
+console.log(highestCount(arrayNum2));
+console.log(highestCount(arrayNum3));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   const cat1win = cat1 - mouse;
@@ -74,18 +74,17 @@ const array3 = [9, 25];
 function fizzBuzz(paramArray) {
   for (let arrayIndex in paramArray) {
     if (paramArray[arrayIndex] % 5 === 0) {
-      paramArray.splice([arrayIndex], 1, 'fizzBuzz');
+      return paramArray.splice([arrayIndex], 1, 'fizzBuzz');
     } else if (paramArray[arrayIndex] % 3 === 0) {
-      paramArray.splice([arrayIndex], 1, 'fizz');
+      return paramArray.splice([arrayIndex], 1, 'fizz');
     } else {
-      paramArray.splice([arrayIndex], 1, 'bug!');
+      return paramArray.splice([arrayIndex], 1, 'bug!');
     }
   }
 }
-fizzBuzz(array1);
+console.log(fizzBuzz(array1));
 fizzBuzz(array2);
 fizzBuzz(array3);
-console.log(array2);
 // Desafio 9
 function encode() {
   // seu código aqui
