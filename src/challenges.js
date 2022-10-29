@@ -39,34 +39,35 @@ footballPoints(14, 8);
 footballPoints(1, 2);
 footballPoints(0, 0);
 // Desafio 6
-const arrayNum1 = [9, 1, 2, 3, 9, 5, 7];
+const arrayNum1 = [9, 0, 2, 3, 9, 5, 7];
 const arrayNum2 = [0, 4, 4, 4, 9, 2, 1];
 const arrayNum3 = [0, 0, 0];
 function highestCount(arrayNums) {
-  let counts = {};
-  arrayNums.forEach((count) => {
-    counts[count] = (counts[count] || 0) + 1;
-  });
-  const maxVal = Math.max(...Object.values(counts));
-  const num = Object.keys(counts).find((key) => counts[key] === maxVal);
-  return `${maxVal}`;
+  var indexX = 0;
+  var maiorNum = Math.max.apply(null, arrayNums);
+  for (var index of arrayNums) {
+    if (index === maiorNum) {
+      indexX += 1;
+    }
+  }
+  return indexX;
 }
 console.log(highestCount(arrayNum1));
 console.log(highestCount(arrayNum2));
 console.log(highestCount(arrayNum3));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  const cat1win = cat1 - mouse;
-  const cat2win = cat2 - mouse;
-  if (cat1win > cat2win) {
-    console.log('cat2');
-  } else if (cat2win > cat1win) {
-    console.log('cat2');
-  } return 'os gatos trombam e o rato foge';
+  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return 'cat2';
+  } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return 'os gatos trombam e o rato foge';   
+  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return'cat1'; 
+ }
 }
-catAndMouse(5, 2, 3);
-catAndMouse(13, 7, 1);
-catAndMouse(5, 3, 3);
+console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 3, 3));
 // Desafio 8
 const array1 = [2, 15, 7, 9, 45];
 const array2 = [7, 9];
