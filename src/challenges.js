@@ -31,9 +31,9 @@ const arrayString3 = ['captain', 'my', 'captain'];
 function concatName(arrayStrings) {
   return `${arrayStrings[arrayStrings.length - 1]} ${arrayStrings[0]}`;
 }
-concatName(arrayString1);
-concatName(arrayString2);
-concatName(arrayString3);
+console.log(concatName(arrayString1));
+console.log(concatName(arrayString2));
+console.log(concatName(arrayString3));
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
