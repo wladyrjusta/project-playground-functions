@@ -72,20 +72,24 @@ console.log(catAndMouse(0, 3, 3));
 const array1 = [2, 15, 7, 9, 45];
 const array2 = [7, 9];
 const array3 = [9, 25];
-function fizzBuzz(paramArray) {
-  for (let arrayIndex in paramArray) {
-    if (paramArray[arrayIndex] % 5 === 0) {
-      return paramArray.splice([arrayIndex], 1, 'fizzBuzz');
-    } else if (paramArray[arrayIndex] % 3 === 0) {
-      return paramArray.splice([arrayIndex], 1, 'fizz');
-    } else {
-      return paramArray.splice([arrayIndex], 1, 'bug!');
-    }
-  }
+function fizzBuzz(arrayNumString) {
+ var strings = []; 
+ for (var index of arrayNumString) {
+  if (index % 3 === 0 && index % 5 === 0) {
+    strings.push('fizzBuzz');
+  } else if (index % 5 === 0) {
+    strings.push('buzz');
+  } else if (index % 3 === 0) { 
+    strings.push('fizz');
+  } else {
+    strings.push('bug!')
+  } 
+ }
+ return strings;
 }
 console.log(fizzBuzz(array1));
-fizzBuzz(array2);
-fizzBuzz(array3);
+console.log(fizzBuzz(array2));
+console.log(fizzBuzz(array3));
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -112,3 +116,5 @@ module.exports = {
   splitSentence,
   techList,
 };
+
+
