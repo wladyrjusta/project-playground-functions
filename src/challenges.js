@@ -26,7 +26,7 @@ splitSentence('Vamo que Vamo');
 splitSentence('foguete');
 // Desafio 4
 function concatName(arrayStrings) {
-  return `${arrayStrings[arrayStrings.length - 1]} ${arrayStrings[0]}`;
+  return `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 concatName(['foguete', 'não', 'tem', 'ré']);
