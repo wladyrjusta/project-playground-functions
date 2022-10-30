@@ -1,9 +1,9 @@
 // Desafio 11
-var arrayPhoneId1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 6, 3];
-var arrayPhoneId2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-var arrayPhoneId3 = [1, 2, 3, 4, 5, 6, 7, 8, 19, 2, 1];
-var arrayPhoneId4 = [1, 2, 3, 4, 5, 6, 7, 5, 9, 6, 6];
-var arrayPhoneId5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2];
+const arrayPhoneId1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 6, 3];
+const arrayPhoneId2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+const arrayPhoneId3 = [1, 2, 3, 4, 5, 6, 7, 8, 19, 2, 1];
+const arrayPhoneId4 = [1, 2, 3, 4, 5, 6, 7, 5, 9, 6, 6];
+const arrayPhoneId5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2];
 function generatePhoneNumber(phoneId) {
   var repeticao = 0;
   for (var index1 of phoneId) {
