@@ -30,14 +30,23 @@ function triangleCheck(lineA, lineB, LineC) {
     return true;
   };
 };
-console.log(triangleCheck(100, 14, 8));
-console.log(triangleCheck(1, 14, 8));
-console.log(triangleCheck(10, 14, 8));
+triangleCheck(100, 14, 8);
+triangleCheck(1, 14, 8);
+triangleCheck(10, 14, 8);
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
-
+let stringExample1 = '1 cerveja';
+let stringExample2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
+function hydrate(string) {
+  let nums = string.match(/\d+/g).map(Number);
+  let total = nums.reduce((total, currentElement) => total + currentElement);
+  if(total === 1) {
+    return `${total} copo de água`;
+  } else if(total > 1) {
+  return `${total} copos de água`;
+ }  
+};
+console.log(hydrate(stringExample1));
+console.log(hydrate(stringExample2));
 module.exports = {
   generatePhoneNumber,
   hydrate,
