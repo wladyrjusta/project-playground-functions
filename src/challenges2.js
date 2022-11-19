@@ -45,7 +45,7 @@ console.log(generatePhoneNumber(arrayPhoneId3));
 console.log(generatePhoneNumber(arrayPhoneId4));
 console.log(generatePhoneNumber(arrayPhoneId5));
 // Desafio 12
-function triangleCheck( ) {
+function triangleCheck() {
 
 }
 
