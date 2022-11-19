@@ -22,14 +22,16 @@ let countNumber = 0;
 console.log(generatePhoneNumber(arrayPhoneId5));
 // Desafio 12
 function triangleCheck(lineA, lineB, LineC) {
+  let result;
   if (lineA > (lineB + LineC) || lineB > (lineA + LineC) || LineC > (lineA + lineB)) {
-    return false;
-  } else if(lineA < Math.abs(lineB - LineC) || lineB < Math.abs(lineA - LineC) || LineC < Math.abs(lineA - LineC)) {
-    return false;
+    result = false;
+  } else if (lineA < Math.abs(lineB - LineC) || lineB < Math.abs(lineA - LineC) || LineC < Math.abs(lineA - LineC)) {
+    result = false;
   } else {
-    return true;
-  };
-};
+    result = true;
+  }
+  return result;
+}
 triangleCheck(100, 14, 8);
 triangleCheck(1, 14, 8);
 triangleCheck(10, 14, 8);
@@ -38,13 +40,15 @@ let stringExample1 = '1 cerveja';
 let stringExample2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
 function hydrate(string) {
   let nums = string.match(/\d+/g).map(Number);
-  let total = nums.reduce((total, currentElement) => total + currentElement);
-  if(total === 1) {
-    return `${total} copo de água`;
-  } else if(total > 1) {
-  return `${total} copos de água`;
- }  
-};
+  let somas = nums.reduce((total, currentElement) => total + currentElement);
+  let message;
+    if (somas === 1) {
+    message = `${somas} copo de água`;
+    } else if (somas > 1) {
+    message = `${somas} copos de água`;
+    }
+  return message;
+}
 console.log(hydrate(stringExample1));
 console.log(hydrate(stringExample2));
 module.exports = {
