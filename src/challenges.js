@@ -1,47 +1,26 @@
 // Desafio 1
-const girafa = true;
-const elefante = true;
-const macaco = false;
 function compareTrue(animal1, animal2) {
   if (animal1 && animal2 === true) {
     return true;
   } return false;
 }
-compareTrue(macaco, elefante);
-compareTrue(macaco, macaco);
-compareTrue(girafa, elefante);
 // Desafio 2
 function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
-calcArea(10, 50);
-calcArea(5, 2);
-calcArea(51, 1);
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
 }
-splitSentence('go Trybe');
-splitSentence('Vamo que Vamo');
-splitSentence('foguete');
 // Desafio 4
 function concatName(arrayStrings) {
   return `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
 }
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
-concatName(['foguete', 'não', 'tem', 'ré']);
-concatName(['captain', 'my', 'captain']);
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-footballPoints(14, 8);
-footballPoints(1, 2);
-footballPoints(0, 0);
 // Desafio 6
-const arrayNum1 = [9, 0, 2, 3, 9, 5, 7];
-const arrayNum2 = [0, 4, 4, 4, 9, 2, 1];
-const arrayNum3 = [0, 0, 0];
 function highestCount(arrayNums) {
   let indexX = 0;
   let maiorNum = Math.max.apply(null, arrayNums);
@@ -52,9 +31,6 @@ function highestCount(arrayNums) {
   }
   return indexX;
 }
-highestCount(arrayNum1);
-highestCount(arrayNum2);
-highestCount(arrayNum3);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catMouseResult;
@@ -67,11 +43,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return catMouseResult;
 }
-catAndMouse(0, 3, 2);catAndMouse(0, 6, 12);catAndMouse(0, 3, 3); 
 // Desafio 8
-const array1 = [2, 15, 7, 9, 45];
-const array2 = [7, 9];
-const array3 = [9, 25];
 function fizzBuzz(arrayNumString) {
   let strings = [];
   for (let index of arrayNumString) {
@@ -87,9 +59,6 @@ function fizzBuzz(arrayNumString) {
   }
   return strings;
 }
-fizzBuzz(array1);
-fizzBuzz(array2);
-fizzBuzz(array3);
 // Desafio 9
 function encode(arrayEncode) {
   arrayEncode = arrayEncode.replace(/a/g, 1);
@@ -99,11 +68,7 @@ function encode(arrayEncode) {
   arrayEncode = arrayEncode.replace(/u/g, 5);
   return arrayEncode;
 }
-encode('hello');
-encode('How are you today?');
-encode('This is an enconding test.');
-encode('go Trybe');
-////
+
 function decode(arrayDecode) {
   arrayDecode = arrayDecode.replace(/1/g, 'a');
   arrayDecode = arrayDecode.replace(/2/g, 'e');
@@ -112,10 +77,7 @@ function decode(arrayDecode) {
   arrayDecode = arrayDecode.replace(/5/g, 'u');
   return arrayDecode;
 }
-decode('h3 th2r2!');
 // Desafio 10
-const arrayTechs = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-const nome = 'Lucas';
 function techList(arrayTechnologies, name) {
   if (arrayTechnologies.length === 0) {
     return 'Vazio!';
@@ -131,7 +93,6 @@ function techList(arrayTechnologies, name) {
   }
   return arrayOfObject;
 }
-techList(arrayTechs, nome);
 
 module.exports = {
   calcArea,

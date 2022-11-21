@@ -1,25 +1,34 @@
 // Desafio 11
-const arrayPhoneId1 = [0, 1, 6];
-const arrayPhoneId2 = [1, 2, 3, 4, -5, 6, 7, 8, 9, 0, 1];
-const arrayPhoneId3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1];
-const arrayPhoneId4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 1];
-const arrayPhoneId5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-function generatePhoneNumber(phoneId) {
-let countNumber = 0;
- for (let num of phoneId) {
-  for (let index in phoneId) {
-    if(num === phoneId[index]) {
-    countNumber += 1;
-   }
+const mostRepeated = (numbers) => {
+  let countRepeated = 0;
+  let countNumber = 0;
+  for (let index in numbers) {
+    let verifyNumber = numbers[index];
+    for (let index2 in numbers) {
+      if (verifyNumber === numbers[index2]) {
+        countNumber += 1;
+      }
+    }
+    if (countNumber > countRepeated) {
+      countRepeated = countNumber;
+    }
+    countNumber = 0;
   }
- }
- return countNumber; 
+  return countRepeated;
 };
-//console.log(generatePhoneNumber(arrayPhoneId1));
-//console.log(generatePhoneNumber(arrayPhoneId2));
-//console.log(generatePhoneNumber(arrayPhoneId3));
-//console.log(generatePhoneNumber(arrayPhoneId4));
-console.log(generatePhoneNumber(arrayPhoneId5));
+function generatePhoneNumber(phoneId) {
+  mostRepeated(phoneId);
+  let telefonNumber = `(${phoneId[0]}${phoneId[1]}) ${phoneId[2]}${phoneId[3]}${phoneId[4]}${phoneId[5]}${phoneId[6]}-${phoneId[7]}${phoneId[8]}${phoneId[9]}${phoneId[10]}`;
+  if (phoneId.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < phoneId.length; index += 1) {
+    if (phoneId[index] < 0 || phoneId[index] > 9 || mostRepeated(phoneId) > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return telefonNumber;
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, LineC) {
   let result;
@@ -32,25 +41,18 @@ function triangleCheck(lineA, lineB, LineC) {
   }
   return result;
 }
-triangleCheck(100, 14, 8);
-triangleCheck(1, 14, 8);
-triangleCheck(10, 14, 8);
 // Desafio 13
-let stringExample1 = '1 cerveja';
-let stringExample2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
 function hydrate(string) {
   let nums = string.match(/\d+/g).map(Number);
   let somas = nums.reduce((total, currentElement) => total + currentElement);
   let message;
-    if (somas === 1) {
+  if (somas === 1) {
     message = `${somas} copo de água`;
-    } else if (somas > 1) {
+  } else if (somas > 1) {
     message = `${somas} copos de água`;
-    }
+  }
   return message;
 }
-console.log(hydrate(stringExample1));
-console.log(hydrate(stringExample2));
 module.exports = {
   generatePhoneNumber,
   hydrate,
