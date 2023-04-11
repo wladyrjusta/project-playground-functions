@@ -3,6 +3,13 @@
 Foram desenvolvidas diversas funções que resolvem problemas com respostas pré-determinadas. Foi utilizada lógica de programação para análise de cada problema e resposta esperada, facilitando a implementação do código de cada uma das funções.
 <br />
 <br />
+ <summary><strong>👨‍💻 Tecnologias utilizadas</strong></summary><br />
+ - array e loop For, If/ Else if/ switch/case.<br />
+ - Funções.<br />
+ - Objetos<br />
+ - ES6 - let, const, arrow functions, template literals, Ternary Operator<br />
+<br />
+<br />
 <strong>👨‍💻 O que foi desenvolvido</strong><br />
 <br />
 função <code>compareTrue</code> utilizando somente o operador <code>&&</code>
